@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--启用驼峰命名规则-->
+<!--	<settings>-->
+<!--		<setting name="mapUnderscoreToCamelCase" value="true" />-->
+<!--	</settings>-->
+
+	<typeAliases>
+		<!-- 如果一个包下有很多的类，我们可以直接给包取别名，这样 该包下面的所有类名，就可以直接使用  -->
+		 <package name="com.crh.entity"/>
+	</typeAliases>
+</configuration>
