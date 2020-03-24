@@ -8,9 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Map;
 
@@ -48,6 +47,17 @@ public class UserController {
         }
         map.put("userList",sysUsrs);
         return "userList";
+    }
+    //返回json
+    @ResponseBody
+    @RequestMapping("/returnJson")
+    public  List returnJson( Map map){
+        List<SysUsr> sysUsrs = userService.selectAll();
+//        for (SysUsr sysUsr : sysUsrs) {
+//            sysUsr.toString();
+//        }
+//        map.put("userList",sysUsrs);
+        return sysUsrs;
     }
 
 
